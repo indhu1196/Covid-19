@@ -170,13 +170,17 @@ survey.onComplete
                         
                         $('#surveyResult').css("display", "block");
                         var txt2 = document.getElementById("red-text");
+                        var txt3 = document.getElementById("advise");
                     
                         if( flag == 1) {
                             txt2.innerHTML = 'High Risk (With Symptoms)';
-                        } else if(dataarr[3] === 'Asthma' || dataarr[3] === 'Chronic lung disease (COPD)' || dataarr[3] === 'Diabetes' || dataarr[3] === 'Heart Diseases' || dataarr[3] === 'Immuno-compromised conditions' || dataarr[3] === 'Pregnancy' || dataarr[4] === 'China' || dataarr[4] === 'Italy' || dataarr[4] === 'Spain' || dataarr[4] === 'Iran' || dataarr[4] === 'Europe' || dataarr[4] === 'Middle East' || dataarr[4] === 'Southeast Asia' || dataarr[4] === 'Country not listed above') {
+                            txt3.innerHTML = "Seek immediate evaluation from a doctor. Notify medical services. Contact MOH&FW helpline for testing. Avoid any travel unless absolutely necessary.​"
+                        } else if(dataarr[4] === 'China' || dataarr[4] === 'Italy' || dataarr[4] === 'Spain' || dataarr[4] === 'Iran' || dataarr[4] === 'Europe' || dataarr[4] === 'Middle East' || dataarr[4] === 'Southeast Asia' || dataarr[4] === 'Country not listed above') {
                             txt2.innerHTML = 'High Risk (Without Symptoms)';
+                            txt3.innerHTML = 'Home quarantine for 14 days. Avoid public activities outside home. Monitor your health daily for any active symptoms. Avoid any travel unless absolutely necessary.​';
                         } else  {
                             txt2.innerHTML =  'Low Risk';
+                            txt3.innerHTML = 'Practice personal hygiene as a preventive measure. Avoid public activities outside home. Avoid any travel unless necessary.';
                         }
     });
     
