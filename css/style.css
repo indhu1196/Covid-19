@@ -124,7 +124,7 @@
     background: #fdfdfe;
     /* border: 1px solid rgba(0,0,0,.125); */
     border-bottom: 1px solid #ddd;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .helpline-list li button:hover {
@@ -218,7 +218,7 @@
 .sv_q_radiogroup.sv-q-col-1 {
     padding: 0 16px;
     border-bottom: 1px solid #ddd;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .sv_q_radiogroup.sv-q-col-1:last-child {
     border: none;
@@ -230,6 +230,10 @@
     font-size: 18px;
     line-height: 20px;
     float: left;
+}
+.sv_q_radiogroup_label:hover {
+    color: #45b8b9;
+    cursor: pointer;
 }
 #surveyElement {
     display: flex;
@@ -316,6 +320,11 @@
 }
 .sv_body.sv_completed_page {
     display: none;
+}
+#goback span img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
 }
 @media screen and (max-width: 767px) {
     #covid-info .main-tabs div {
