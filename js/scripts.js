@@ -147,28 +147,29 @@ var json = {
     ],
     completedHtml: "Thankyou"
 };
-// var data;
+var dataarr = [];
 window.survey = new Survey.Model(json);
-
-var low = 0;
 
 survey.onComplete
     .add(function (result) {
-        document
-            .querySelector('#surveyResult')
-            .textContent = "Result JSON:\n" + JSON.stringify(result.data, null, 3);
+        // document
+        //     .querySelector('#surveyResult')
+            // .textContent = "Result JSON:\n" + JSON.stringify(result.data, null, 3);
                         forEach(result.data, function (value, index) {
                                 console.log("Question:"+index+" Answer: " + value); // A, B, C, D
-                                if( value == 'yes'|| 'Asthma' || 'Chronic lung disease (COPD)' || 'Diabetes' || 'Heart Diseases' || 'Immuno-compromised conditions' || 'Pregnancy' || 'China' || 'Italy' || 'Spain' || 'Iran' || 'Europe' || 'Middle East' || 'Southeast Asia' || 'Country not listed above') {
-                                    low++
-                                } else {
-                                    low--
-                                }
+                                dataarr.push(value)
                         });
-                        console.log(low);
-
+                        console.log(dataarr);
+                        $('#surveyResult').css("display", "block");
+                        var txt2 = document.getElementById("red-text");
+                    
+                        if(dataarr[3] === 'Asthma' || dataarr[3] === 'Chronic lung disease (COPD)' || dataarr[3] === 'Diabetes' || dataarr[3] === 'Heart Diseases' || dataarr[3] === 'Immuno-compromised conditions' || dataarr[3] === 'Pregnancy' || dataarr[4] === 'China' || dataarr[4] === 'Italy' || dataarr[4] === 'Spain' || dataarr[4] === 'Iran' || dataarr[4] === 'Europe' || dataarr[4] === 'Middle East' || dataarr[4] === 'Southeast Asia' || dataarr[4] === 'Country not listed above' || dataarr[5] === 'yes' || dataarr[6] === 'yes' || dataarr[7] === 'yes' || dataarr[8] === 'yes' || dataarr[9] === 'yes' || dataarr[10] === 'yes' || dataarr[11] === 'yes' || dataarr[12] === 'yes' || dataarr[13] === 'yes') {
+                            txt2.innerHTML = 'High Risk (Without Symptoms)';
+                        } else  {
+                            txt2.innerHTML =  'Low Risk';
+                        }
     });
-    console.log(low);
+    
 var forEach = function (collection, callback, scope) {
         if (Object.prototype.toString.call(collection) === '[object Object]') {
                 for (var prop in collection) {
