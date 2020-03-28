@@ -337,6 +337,7 @@
     }
     .sv_q.sv_qstn {
         width: 100% !important;
+        padding: 16px 30px;
     }
     #testing-data {
         width: 100%;
