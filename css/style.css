@@ -235,7 +235,46 @@
 .helpline-head h1 {
     color: #CFA503;
 }
-
+#surveyResult {
+    /* display: block; */
+    width: 50%;
+    margin: 40px auto;
+    text-align: left;
+}
+#risk-head h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 30px;
+}
+#red-text {
+    color: #E30A1D;
+    font-weight: 500;
+}
+#note, #recom p {
+    font-family: 'Rubik', sans-serif;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #555555;
+}
+#risk-head {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+#recom {
+    font-family: 'Rubik', sans-serif;
+    margin-top: 20px;
+}
+#recom h1 {
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: 400; 
+}
+.helpline-list li h1 a {
+    color: #000000;
+}
 @media screen and (max-width: 767px) {
     #covid-info .main-tabs div {
         padding: 5px 20px;
@@ -260,7 +299,7 @@
     #testing-data {
         width: 100%;
     }
-    .helpline-list, .center-list, .intro-line {
+    .helpline-list, .center-list, .intro-line, #surveyResult {
         width: 90%;
     }
 }
