@@ -96,8 +96,7 @@
 .center-list {
     width: 100%;
 }
-
-.helpline-list li button, .center-list li, .sv_q_radiogroup.sv-q-col-1 {
+.helpline-list li button {
     /* float: left; */
     width: 100%;
     margin-bottom: 10px;
@@ -109,6 +108,22 @@
     border-radius: .25rem;
     background: #fdfdfe;
     border: 1px solid rgba(0,0,0,.125);
+    /* border-bottom: 1px solid #ddd; */
+    cursor: pointer;
+}
+.center-list li {
+    /* float: left; */
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 16px;
+    text-align: left;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px; */
+    color: rgb(0, 0, 0);
+    outline: none;
+    border-radius: .25rem;
+    background: #fdfdfe;
+    /* border: 1px solid rgba(0,0,0,.125); */
+    border-bottom: 1px solid #ddd;
     cursor: pointer;
 }
 
@@ -169,13 +184,18 @@
     font-weight: 400;
 }
 .sv_q.sv_qstn {
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    /* box-shadow: 0 2px 4px 0 rgba(0,0,0,.1); */
     transition: .3s;
     background-color: #fff;
     padding: 16px 16px 20px;
     border-radius: .25em;
-    width: 50% !important;
+    /* max-width: 50% !important; */
     margin: 15px auto !important;
+}
+.sv_row {
+    min-width: 400px;
+    width: 50% !important;
+    margin: 0 auto;
 }
 .sv_q_num, .sv_progress {
     display: none;
@@ -190,13 +210,18 @@
     color: #000000;
 }
 .sv_q_radiogroup_control_item {
-    width   : 360px;
+    width   : 100%;
   margin  : 0;
   padding : 0;
   opacity : 0;
 }
 .sv_q_radiogroup.sv-q-col-1 {
     padding: 0 16px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.sv_q_radiogroup.sv-q-col-1:last-child {
+    border: none;
 }
 .sv_q_radiogroup_label {
     margin-top: -14px;
@@ -204,11 +229,23 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 20px;
+    float: left;
+}
+#surveyElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#back-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #goback {
-    width: 100%;
+    /* width: 25%; */
     position: absolute;
     top: 0;
+    /* left: 38%; */
     border: none;
     outline: none;
     padding: 10px;
@@ -216,6 +253,8 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
+    background: #000;
+    color: #fff;
 }
 #symptom-data, #helpline-data, #testing-data {
     display: block;
@@ -274,6 +313,9 @@
 }
 .helpline-list li h1 a {
     color: #000000;
+}
+.sv_body.sv_completed_page {
+    display: none;
 }
 @media screen and (max-width: 767px) {
     #covid-info .main-tabs div {
