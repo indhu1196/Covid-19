@@ -48,7 +48,17 @@
                     <h1>Coronavirus<br /> Symptom checker</h1>
                 </div>
                 <div id="surveyElement" ></div>
-                <div id="surveyResult"></div>
+                <div id="surveyResult" style="display: none;">
+                    <div id="risk-head">
+                        <h1 id="firsth1">Risk of Covid-19*:</h1>
+                        <em><h1 id="red-text"></h1></em>
+                        <p id="note">*This is based on current understanding of the disease which is subject to change. Please do consult the doctor and take their advice in case you are not feeling well.</p>
+                    </div>
+                    <div id="recom">
+                        <h1>Recommendation: </h1>
+                        <p id="advise">Practice personal hygiene as a preventive measure. Avoid public activities outside home. Avoid any travel unless necessary.</p>
+                    </div>
+                </div>
               </div>
             <div id="helpline-data" style="display: none;">
                 <div class="helpline-head">
@@ -61,49 +71,49 @@
                     <p class="intro-line">Indian government and<a href="https://www.mohfw.gov.in/" target="_blank"> Ministry of Health &amp;
                     Family Welfare </a>has provided the following helpline numbers of states.</p>            
                     <ul class="helpline-list">
-                        <li><button><p>National Helpline Number</p><h1>1075</h1></button> </li>
-                        <li><button><p>Central Helpline Number</p><h1>+91-11-23978043</h1></button> </li>
-                        <li><button><p>MyGov WhatsApp Number</p><h1>+91-90131-51515</h1></button> </li>
+                        <li><button><p>National Helpline Number</p><h1><a href="tel:1075">1075</a></h1></button> </li>
+                        <li><button><p>Central Helpline Number</p><h1><a href="tel:+91-11-23978043">+91-11-23978043</a></h1></button> </li>
+                        <li><button><p>MyGov WhatsApp Number</p><h1><a href="tel:+91-90131-51515">+91-90131-51515</a></h1></button> </li>
                         <li><button><p>Central Helpline Email</p><h1>ncov2019@gmail.com</h1></button> </li>
                     </ul>
                     <p class="intro-line">States helpline number</p>
                     <ul class="helpline-list">
-                        <li><button><p>Andhra Pradesh</p><h1>0866-2410978</h1>         </button> </li>
-                        <li><button><p>Arunachal Pradesh</p><h1>9436055743</h1></button> </li>
-                        <li><button><p>Assam</p><h1>6913347770</h1></button> </li>
-                        <li><button><p>Bihar</p><h1>104</h1></button> </li>
-                        <li><button><p>Chhattisgarh</p><h1>077122-35091</h1></button> </li>
-                        <li><button><p>Goa</p><h1>104</h1></button> </li>
-                        <li><button><p>Gujarat</p><h1>104</h1></button> </li>
-                        <li><button><p>Haryana</p><h1>8558893911</h1></button> </li>
-                        <li><button><p>Himachal Pradesh</p><h1>104</h1></button> </li>
-                        <li><button><p>Jharkhand</p><h1>104</h1></button> </li>
-                        <li><button><p>Karnataka</p><h1>104</h1></button> </li>
-                        <li><button><p>Kerala</p><h1>0471-2552056</h1></button> </li>
-                        <li><button><p>Madhya Pradesh</p><h1>0755-2527177</h1></button> </li>
-                        <li><button><p>Maharashtra</p><h1>020-26127394</h1></button> </li>
-                        <li><button><p>Manipur</p><h1>3852411668</h1></button> </li>
-                        <li><button><p>Meghalaya </p><h1>108</h1></button> </li>
-                        <li><button><p>Mizoram</p><h1>102</h1></button> </li>
-                        <li><button><p>Nagaland</p><h1>7005539653</h1></button> </li>
-                        <li><button><p>Odisha</p><h1>9439994859</h1></button> </li>
-                        <li><button><p>Punjab</p><h1>104</h1></button> </li>
-                        <li><button><p>Rajasthan </p><h1>0141-2225624</h1></button> </li>
-                        <li><button><p>Sikkim</p><h1>104</h1></button> </li>
-                        <li><button><p>Tamil Nadu</p><h1>044-29510500</h1></button> </li>
-                        <li><button><p>Telangana </p><h1>104</h1></button> </li>
-                        <li><button><p>Tripura</p><h1>0381-2315879</h1></button> </li>
-                        <li><button><p>Uttarakhand</p><h1>104</h1></button> </li>
-                        <li><button><p>Uttar Pradesh</p><h1>18001805145</h1></button> </li>
-                        <li><button><p>West Bengal</p><h1>1800313444222</h1></button> </li>
-                        <li><button><p>Andaman and Nicobar Islands</p><h1>03192-232102</h1></button> </li>
-                        <li><button><p>Chandigarh</p><h1>9779558282</h1></button> </li>
-                        <li><button><p>Dadra and Nagar Haveli and Dam</p><h1>104</h1></button> </li>
-                        <li><button><p>Delhi</p><h1>011-22307145</h1></button> </li>
-                        <li><button><p>Jammu &amp; Kashmir </p><h1>1912520982</h1></button> </li>
-                        <li><button><p>Ladakh</p><h1>1982256462</h1></button> </li>
-                        <li><button><p>Lakshadweep</p><h1>4896263742</h1></button> </li>
-                        <li><button><p>Puducherry</p><h1>104</h1></button> </li>
+                        <li><button><p>Andhra Pradesh</p><h1><a href="tel:0866-2410978">0866-2410978</a></h1>         </button> </li>
+                        <li><button><p>Arunachal Pradesh</p><h1><a href="tel:9436055743">9436055743</a></h1></button> </li>
+                        <li><button><p>Assam</p><h1><a href="tel:6913347770">6913347770</a></h1></button> </li>
+                        <li><button><p>Bihar</p><h1><a href="tel:104">104</a></h1></button> </li>
+                        <li><button><p>Chhattisgarh</p><h1><a href="tel:077122-35091">077122-35091</a></h1></button> </li>
+                        <li><button><p>Goa</p><h1><a href="tel:104">104</a></h1></button> </li>
+                        <li><button><p>Gujarat</p><h1><a href="tel:104">104</a></h1></button> </li>
+                        <li><button><p>Haryana</p><h1><a href="tel:8558893911">8558893911</a></h1></button> </li>
+                        <li><button><p>Himachal Pradesh</p><h1><a href="tel:104">104</a></h1></button> </li>
+                        <li><button><p>Jharkhand</p><h1><a href="tel:104">104</a></h1></button> </li>
+                        <li><button><p>Karnataka</p><h1><a href="tel:104">104</a></h1></button> </li>
+                        <li><button><p>Kerala</p><h1><a href="tel:0471-2552056">0471-2552056</a></h1></button> </li>
+                        <li><button><p>Madhya Pradesh</p><h1><a href="tel:0755-2527177">0755-2527177</a></h1></button> </li>
+                        <li><button><p>Maharashtra</p><h1><a href="tel:">020-26127394</a></h1></button> </li>
+                        <li><button><p>Manipur</p><h1><a href="tel:">3852411668</a></h1></button> </li>
+                        <li><button><p>Meghalaya </p><h1><a href="tel:108">108</a></h1></button> </li>
+                        <li><button><p>Mizoram</p><h1><a href="tel:102">102</a></h1></button> </li>
+                        <li><button><p>Nagaland</p><h1><a href="tel:7005539653">7005539653</a></h1></button> </li>
+                        <li><button><p>Odisha</p><h1><a href="tel:9439994859">9439994859</a></h1></button> </li>
+                        <li><button><p>Punjab</p><h1><a href="tel:104">104</a></h1></button> </li>
+                        <li><button><p>Rajasthan </p><h1><a href="tel:0141-2225624">0141-2225624</a></h1></button> </li>
+                        <li><button><p>Sikkim</p><h1><a href="tel:104">104</a></h1></button> </li>
+                        <li><button><p>Tamil Nadu</p><h1><a href="tel:044-29510500">044-29510500</a></h1></button> </li>
+                        <li><button><p>Telangana </p><h1><a href="tel:104">104</a></h1></button> </li>
+                        <li><button><p>Tripura</p><h1><a href="tel:0381-2315879">0381-2315879</a></h1></button> </li>
+                        <li><button><p>Uttarakhand</p><h1><a href="tel:104">104</a></h1></button> </li>
+                        <li><button><p>Uttar Pradesh</p><h1><a href="tel:18001805145">18001805145</a></h1></button> </li>
+                        <li><button><p>West Bengal</p><h1><a href="tel:1800313444222">1800313444222</a></h1></button> </li>
+                        <li><button><p>Andaman and Nicobar Islands</p><h1><a href="tel:03192-232102">03192-232102</a></h1></button> </li>
+                        <li><button><p>Chandigarh</p><h1><a href="tel:9779558282">9779558282</a></h1></button> </li>
+                        <li><button><p>Dadra and Nagar Haveli and Dam</p><h1><a href="tel:104">104</a></h1></button> </li>
+                        <li><button><p>Delhi</p><h1><a href="tel:011-22307145">011-22307145</a></h1></button> </li>
+                        <li><button><p>Jammu &amp; Kashmir </p><h1><a href="tel:1912520982">1912520982</a></h1></button> </li>
+                        <li><button><p>Ladakh</p><h1><a href="tel:1982256462">1982256462</a></h1></button> </li>
+                        <li><button><p>Lakshadweep</p><h1><a href="tel:4896263742">4896263742</a></h1></button> </li>
+                        <li><button><p>Puducherry</p><h1><a href="tel:104">104</a></h1></button> </li>
                     </ul>
                 </div>
             </div>
